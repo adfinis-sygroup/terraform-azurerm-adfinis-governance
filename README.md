@@ -7,13 +7,13 @@ This module also provides names for all resources on Azure based on the internal
 conventions. For example the variable `resource_group` is predefined based
 on the naming schema and the defined standard variables:
 
-```
+```hcl
 resource_group = "${var.prefix["resource-group"]}-${var.beneficiary}-${var.purpose}-${var.environment}-${var.location}-${var.serial}"
 ```
 
 Which will result in the below value assignment:
 
-```
+```hcl
 resource_group = rg-adsy-consul-test-westeurope-01
 ```
 
@@ -23,7 +23,7 @@ This module requires Terraform >= 0.12.
 
 ## Usage
 
-```
+```hcl
 module "adfinis-governance" {
   source = "git::ssh://git@github.com:adfinis-sygroup/terraform-azurerm-adfinis-governance.git"
 
