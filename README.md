@@ -25,7 +25,8 @@ This module requires Terraform >= 0.12.
 
 ```hcl
 module "adfinis-governance" {
-  source = "git::ssh://git@github.com:adfinis/terraform-azurerm-adfinis-governance.git"
+  source  = "adfinis/adfinis-governance/azurerm"
+  version = ">=0.1.0"
 
   beneficiary = "adfinis"
   billto      = "clarkkent"
